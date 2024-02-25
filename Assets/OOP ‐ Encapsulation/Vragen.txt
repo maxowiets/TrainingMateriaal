@@ -1,0 +1,17 @@
+Waarom zou het goed zijn om getters/setters te gebruiken in plaats van publieke variabelen?
+	Zodat een class van buitenaf niet zomaar een variabele aanpast.
+	Daarnaast wil je soms ook dat een variabele alleen maar een getter of een setter heeft.
+	Ook wil je misschien extra functionaliteit toevoegen aan je getter of setter, 
+	wat je niet bij elk ander script wil toevoegen die deze specifieke variabele probeert te gebruiken.
+
+Waarom zit er een Math Clamp in de Health setter?
+	Dat is zodat een class van buitenaf niet zomaar de waarde van Health te groot of te klein maakt.
+	Het kan zijn dat jij 50/100 health hebt en een heal van 200 oppakt. 
+	Dan wil je niet dat deze heal je health naar 250 zet, maar clampt tussen wat de player mag hebben.
+	Daarbij hoeft een class van buitenaf ook niet elke keer te checken hoeveel health de speler maar mag hebben,
+	en zo voorkom je veel onnodige code.
+
+Kun je ook alleen een getter maken?
+	Ja, dan zorg je ervoor dat van buitenaf deze variabele überhaupt niet aangepast kan worden.
+	Hierdoor heb je een soort ReadOnly variabele gemaakt.
+	Deze variabele kan bijvoorbeeld nog extra functionaliteit kan hebben, in tegenstelling tot een ReadOnly.

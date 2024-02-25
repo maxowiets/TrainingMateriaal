@@ -1,0 +1,19 @@
+In eerste instantie was het mij niet helemaal duidelijk waarom de Wheels nou wel konden blijven en dus voor de aggregatie zorgt,
+maar wanneer een Player verdwijnt, dat de inventory dan weg is.
+
+Dit ligt heel waarschijnlijk ook aan de context, maar bijvoorbeeld in Minecraft is het logisch,
+aangezien al je items droppen als je doodgaat. Wat dus komt doordat de items geen plek meer hebben om te zijn.
+Hier wordt dan gebruik gemaakt van Compositie.
+
+Maar je kan dus ook een inventory hebben die dropt als je doodgaat, zoals in ?PUBG?. 
+Dan lijkt mij dat de inventory gebruik maakt van Aggregatie. 
+
+
+
+Zo kan je ook een game hebben waarbij je een enemy killt die een zwaard/bow/axe heeft. 
+Maar dan ligt het net aan de game, wat er met het wapen gebeurt. 
+Dropt het op de grond? Omdat weapon drops een groot deel van de game is. Hier is dan sprake van Aggregatie.
+Verdwijnt het wapen? Omdat weapons looten niet deel is van de gameloop. Hier is dan sprake van Compositie.
+
+Als er eigen instantie mogelijk zijn van een class, dan is er sprake van Aggregatie.
+Als een instantie verdwijnt wanneer de parent verdwijnt, dan is er sprake van Compositie.

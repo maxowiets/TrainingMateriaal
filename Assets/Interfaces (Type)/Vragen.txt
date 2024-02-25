@@ -1,0 +1,14 @@
+Waarom kun je met interfaces losgekoppelde code schrijven?
+	Omdat een ander object alleen maar hoeft te weten of het object deze interface bevat om te weten of die ermee kan interacteren.
+	Hierbij kan een interface voor verschillende objecten opgeroepen worden zonder dat een ander script hoeft te weten wat het doet.
+
+Hoe kunnen interfaces bijdragen aan het uitbreiden van het spel met nieuwe functies of objecten?
+	Een object kan meerdere interfaces hebben, waardoor verschillende combinaties mogelijk zijn.
+	Daarnaast kunnen veel verschillende andere script net hun eigen implementatie hebben, maar toch op dezelfde manier aangeroepen worden.
+	Voorbeelden van combinaties zijn:
+		Enemy -> Damageable
+		Door -> Interactable
+		Shopkeeper -> Damageable, Interactable
+
+Waarom heet het een 'interface'? Waar ken je die naam van?
+	Omdat het gaat over de interactie tussen ongedefinieerde verschillende objecten.

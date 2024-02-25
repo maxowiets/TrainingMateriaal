@@ -1,0 +1,35 @@
+Hoe flexibel vind je deze code? Waarom is dat?
+	Ik heb eerder een weapon system gemaakt die hiermee werkte. 
+	In eerste instantie is het heel fijn om verschillende soorten base weapons te hebben, 
+	waarbij ieder zijn eigen class en functionaliteit heeft, die je allemaal makkelijk kan aansturen.
+	
+	Wanneer je een heleboel verschillende soorten wapen hebt, die een mix worden van allemaal delen van andere wapens,
+	dan wordt het lastig om te bepalen waar alles precies van inherit.
+	
+	Bijvoorbeeld: Melee weapon + Instant/Charged Attack + Line/AoE/Cone Attack
+	Ga je dan 	Melee -> Line Attack
+			Melee -> Charged Attack -> Line Attack
+			Melee -> AoE Attack
+			Melee -> Charged Attack -> AoE Attack
+	
+	of		Melee -> Line Attack
+			Melee -> Line Attack -> Charged Attack
+			Melee -> AoE Attack
+			Melee -> AoE Attack -> Charged Attack	
+
+
+Waarom is de Character class 'abstract'? Wat doet dit?
+	Bij een abstract class zijn er bepaalde abstract functies die inherit worden. 
+	Deze functies zijn de basis van die class en elke class die hieruit inherit moet minimaal deze functionliteit hebben.
+	Elk wapen heeft bijvoorbeeld een Attack hebben, maar dat kan met ieder zijn eigen functionaliteit.
+	
+	Zo kan bijvoorbeeld een character een Weapon variabele hebben, waarmee die een wapen kan aansturen. 
+	Hierbij hoeft dan niet gecheckt te worden of het bijvoorbeeld een ranged of melee weapon is, 
+	waarbij je dan bijvoorbeeld specifiek "MeleeAttack", of "RangedAttack" voor hoeft aan te roepen.
+
+
+Waarom heet de gekozen opzet 'polymorfisme'?
+	Omdat je meerdere (poly) vormen (morfs) kan hebben van 1 base class. 
+	Zo kan je bijvoorbeeld 20 verschillende ranged enemies hebben die de standaard functionaliteit gebruiken van een ranged enemy, 
+	maar sommigen daarvan iets specifiekere Attack of TakeDamage functionaliteit hebben.
+
